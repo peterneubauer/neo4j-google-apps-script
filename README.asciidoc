@@ -2,3 +2,9 @@
 
 This is a project to provide a driver for the http://neo4j.org[Neo4j Graph Database] from Google Spreadsheet. For a sample, see http://www.dzone.com/links/r/neo4j_labs_heroku_neo4j_and_google_spreadsheet_in.html[Neo4j, Google Spreadsheet and Heroku Screencast]
 
+The driver provides a number of functions to access remote Neo4j REST endpoints, namely
+
+    =cypher(queryCell, uriCell)
+    
+    =cell(cypherJsonResultString,row,columnName)
+

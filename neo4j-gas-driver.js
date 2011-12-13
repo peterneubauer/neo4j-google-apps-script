@@ -7,7 +7,7 @@ var neo4j = {
 
   cell: function(str, row, column) {
     var result=Utilities.jsonParse(str);
-    var col=indexOf(result['columns'],column);
+    var col=neo4j.indexOf(result['columns'],column);
     return result['data'][row][col];
   },
 

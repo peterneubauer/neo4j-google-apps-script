@@ -6,13 +6,13 @@ var neo4j = {
   },
 
   cell: function(str, row, column) {
-    var result=Utilities.jsonParse(str);
-    var col=neo4j.indexOf(result['columns'],column);
+    var result = Utilities.jsonParse(str);
+    var col = neo4j.indexOf(result['columns'],column);
     return result['data'][row][col];
   },
 
-  indexOf:function(ary, data) {
-    for (var i=0; i<ary.length;i++) {
+  indexOf: function(ary, data) {
+    for (var i=0; i<ary.length; i++) {
      if ( data == ary[i]) return i;
     }
     return -1;
@@ -20,11 +20,11 @@ var neo4j = {
 
   //utility functions
 
-  dateToString:function(date) {
+  dateToString: function(date) {
     Logger.log("date: "+ datum);
     var doc = SpreadsheetApp.getActiveSheet();
     var datum = date;
     Logger.log(datum);
     return datum.getTime();
   }
-}
+};
